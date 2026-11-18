@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fee Payment Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🎓 College Fee Portal</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#payment">Payment</a>
+        <a href="#history">History</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Welcome to Online Fee Payment</h1>
+    <p>Pay your college fees securely and easily from anywhere.</p>
+    <a href="#login" class="btn">Student Login</a>
+</section>
+
+<section id="login" class="login">
+    <h2>Student Login</h2>
+    <input type="text" id="studentId"
+        placeholder="Enter Student ID">
+    <input type="password" id="password"
+        placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMessage"></p>
+</section>
+
+<section id="dashboard" class="dashboard">
+    <h2>Student Dashboard</h2>
+    <div class="student-info">
+        <p><b>Name:</b> Bindhu Sri</p>
+        <p><b>Student ID:</b> 2026001</p>
+        <p><b>Course:</b> B.Tech</p>
+        <p><b>Year:</b> 3rd Year</p>
+    </div>
+</section>
+
+<section class="fees">
+    <h2>Fee Details</h2>
+    <table>
+        <tr><th>Fee Type</th><th>Amount (₹)</th></tr>
+        <tr><td>Tuition Fee</td><td>35000</td></tr>
+        <tr><td>Library Fee</td><td>2000</td></tr>
+        <tr><td>Exam Fee</td><td>3000</td></tr>
+        <tr><td>Bus Fee</td><td>5000</td></tr>
+        <tr><th>Total Fee</th><th>45000</th></tr>
+    </table>
+</section>
+
+<section id="payment" class="payment">
+    <h2>Online Fee Payment</h2>
+
+    <p>Total Amount: <b>₹45,000</b></p>
+
+    <select id="method">
+        <option value="">Select Payment Method</option>
+        <option value="UPI">UPI</option>
+        <option value="Debit Card">Debit Card</option>
+        <option value="Credit Card">Credit Card</option>
+        <option value="Net Banking">Net Banking</option>
+    </select>
+
+    <button onclick="payFee()">Pay Now</button>
+    <p id="paymentMessage"></p>
+</section>
+
+<section id="history" class="history">
+    <h2>Payment History</h2>
+    <div id="historyList">
+        No payments yet.
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 College Fee Payment Portal</p>
+    <p>Contact: college@example.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
